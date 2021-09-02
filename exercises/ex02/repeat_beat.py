@@ -14,7 +14,7 @@ if input_number <= 0:
     print("No beat...")
 else:
     while i < input_number:
-        if i < len(input_string) - 1:
+        if i < input_number - 1:
             new_string = new_string + input_string + " "
         else:
             if i == input_number - 1:
