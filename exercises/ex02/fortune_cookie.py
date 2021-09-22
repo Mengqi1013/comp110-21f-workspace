@@ -13,7 +13,7 @@ from random import randint
 
 
 # Begin your solution here...
-random_number = randint(1, 9)
+random_number: int = randint(1, 9)
 
 if random_number < 3:
     print("Your fortune cookie says...")
