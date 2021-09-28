@@ -4,15 +4,17 @@ __author__ = "730485647"
 
 
 # TODO: Implement your functions here.
-def all(my_list: list[int], number: int) -> bool:
+def all(my_list: list[int], digit: int) -> bool:
     """Return True if an input value is found, false otherwise."""
     i: int = 0
+    counter: int = 0
     while i < len(my_list):
         item: int = my_list[i]
-        if item == number:
-            return True
+        if digit == item:
+            counter = counter + 1
         i += 1
-
+    if counter == len(my_list) and len(my_list) > 0:
+        return True
     return False
 
 
@@ -28,7 +30,13 @@ def is_equal(a: list[int], b: list[int]) -> bool:
             counter = counter + 1
         i += 1
         j += 1
-    if counter == len(a) or counter == len(b) - 1 and counter != 0:
+    if len(a) == 0 and len(b) > 0:
+        return False
+    if len(b) == 0 and len(a) > 0:
+        return False
+    if len(b) == 0 and len(a) == 0:
+        return True
+    if counter == len(a) or counter == len(b) - 1:
         return True
     return False
 
@@ -44,4 +52,3 @@ def max(input: list[int]) -> int:
             max = input[i]
         i += 1
     return max
-    
