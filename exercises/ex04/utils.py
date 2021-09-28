@@ -28,7 +28,7 @@ def is_equal(a: list[int], b: list[int]) -> bool:
             counter = counter + 1
         i += 1
         j += 1
-    if counter == len(a) or counter == len(b):
+    if counter == len(a) or counter == len(b) - 1 and counter != 0:
         return True
     return False
 
@@ -38,14 +38,10 @@ def max(input: list[int]) -> int:
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     i: int = 0
-    while i < len(input) - 1:
-        bigger_value = 0
-        left_item: int = int(input[i])
-        right_item: int = int(input[i + 1])
-        if int(input[i]) >= int(input[i + 1]):
-            bigger_value = left_item
-        else:
-            bigger_value = right_item
+    max: int = input[0]
+    while i < len(input):
+        if input[i] >= max:
+            max = input[i]
         i += 1
-    return bigger_value
+    return max
     
