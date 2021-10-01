@@ -10,7 +10,7 @@ def test_only_evens():
     """Tests if the only_evens function works as expected."""
     assert only_evens([1, 2, 3]) == [2]
     assert only_evens([1, 5, 3]) == []
-    assert only_evens([4, 4, 4]) == [4]
+    assert only_evens([4, 4, 4]) == [4, 4, 4]
 
 
 def test_sub():
