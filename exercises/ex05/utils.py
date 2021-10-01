@@ -21,14 +21,15 @@ def sub(xs: list[int], a: int, b: int) -> list[int]:
     """Returns a subset of the given list based on the starting and ending indexes."""
     new_list: list[int] = []
     if a < 0:
-        a = a + len(xs)
+        a = 0
     if a == len(xs):
         new_list = []
         return new_list
     if b < 0:
-        b = b + len(xs)
+        new_list = []
+        return new_list
     if b > len(xs):
-        b = len((xs)) - 1
+        b = len((xs))
     if len(xs) == 0:
         new_list = []
         return new_list
